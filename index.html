@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Academic Support</title>
+    <style>
+        body {
+            font-family: POPPINS, sans-serif;
+            color: #262626;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background: url('AI-Academy-MGPPIA.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 7px;
+                    background-color: #f5f5f5;
+            border-bottom: 1px solid #ddd;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            height: 100px;
+        }
+
+        .logonegro {
+            max-height: 70px;
+            visibility: visible;
+            text-align: center;
+        }
+
+        .logoblanco {
+            max-height: 70px;
+            visibility: hidden;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 50px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            font-family: poppins, sans-serif;
+            font-style: bold;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #99cc06;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-container button:hover,
+        .button-container button:focus {
+            background-color: #373835;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            max-width: 90%;
+            flex: 1;
+        }
+
+        .chatbot-container {
+            width: 600px;
+            height: 600px;
+            background-color: #f5f5f5;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        .avatars-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .avatar-container {
+            width: 600px;
+            height: 600px;
+            background-color: #262626;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .avatar-container.active {
+            display: flex;
+        }
+
+        .avatar-container h2 {
+            margin: 0;
+            padding: 10px;
+            font-size: 1.5em;
+            border-radius: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logonegro" src="AI-Academy-Logo.png" alt="AI Academy Logo"><br/>
+        <img class="logoblanco" src="AI-Academy-logo-white.png" alt="AI Academy Logo">
+    </header>
+
+    <div class="button-container">
+        <button onclick="showAvatar('avatar1')">Coordinación Cursado</button>
+        <button onclick="showAvatar('avatar2')">Soporte TIF</button>
+    </div>
+
+    <div class="main-container">
+        <div class="chatbot-container">
+            <iframe
+                src="https://app.wonderchat.io/chatbot/cm4vl47wz01aeqdrnuw13l3ul"
+                style="border-width: 0px; border-radius: 1px;"
+                width="100%"
+                height="100%">
+            </iframe>
+        </div>
+
+        <div class="avatars-container">
+            <div class="avatar-container active" id="avatar1">
+                <h2>Coordinación Cursado</h2>
+               <script>
+                !function(window){
+                    const host="https://labs.heygen.com",
+                    url=host+"/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiI4ZmNhYzQxNDdiNGU0ZGFiOTgxOWI5M2Vi%0D%0AMDlkY2UxMCIsInByZXZpZXdJbWciOiJodHRwczovL2ZpbGVzMi5oZXlnZW4uYWkvYXZhdGFyL3Yz%0D%0ALzhmY2FjNDE0N2I0ZTRkYWI5ODE5YjkzZWIwOWRjZTEwL2Z1bGwvMi4yL3ByZXZpZXdfdGFyZ2V0%0D%0ALndlYnAiLCJuZWVkUmVtb3ZlQmFja2dyb3VuZCI6ZmFsc2UsImtub3dsZWRnZUJhc2VJZCI6ImNm%0D%0AMzFkYmQ3MDBhNTRkMzJiNmIxMjYxODNiMDBjYjAzIiwidXNlcm5hbWUiOiI5Mzc0NGZkZTc1NGY0%0D%0AY2ZjOTQzNjA2NTU4Y2M3NjZlZSJ9&inIFrame=1",                    
+                    clientWidth=document.body.clientWidth,
+                    wrapDiv=document.createElement("div");
+                    wrapDiv.id="heygen-streaming-embed";
+                    const container=document.createElement("div");
+                    container.id="heygen-streaming-container";
+                    const stylesheet=document.createElement("style");
+                    stylesheet.innerHTML=`
+                        #heygen-streaming-embed {
+                            z-index: 9999;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 0;
+                            border: none;
+                            box-shadow: none;
+                            transition: none;
+                            overflow: hidden;
+                        }
+                        #heygen-streaming-container {
+                            width: 100%;
+                            height: 100%;
+                        }
+                        #heygen-streaming-container iframe {
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                        }
+                    `;
+                    const iframe=document.createElement("iframe");
+                    iframe.allowFullscreen=!1;
+                    iframe.title="Streaming Embed";
+                    iframe.role="dialog";
+                    iframe.allow="microphone";
+                    iframe.src=url;
+                    let visible=!1,initial=!1;
+                    window.addEventListener("message",(e=>{
+                        e.origin===host&&e.data&&e.data.type&&"streaming-embed"===e.data.type&&(
+                            "init"===e.data.action?(initial=!0,wrapDiv.classList.toggle("show",initial)):
+                            "show"===e.data.action?(visible=!0,wrapDiv.classList.toggle("expand",visible)):
+                            "hide"===e.data.action&&(visible=!1,wrapDiv.classList.toggle("expand",visible))
+                        )
+                    }));
+                    container.appendChild(iframe);
+                    wrapDiv.appendChild(stylesheet);
+                    wrapDiv.appendChild(container);
+                    document.getElementById("avatar1").appendChild(wrapDiv);
+                }(globalThis);
+                </script>
+            </div>
+
+            <div class="avatar-container" id="avatar2">
+                <h2>Soporte TIF</h2>
+               <script>
+                !function(window){
+                    const host="https://labs.heygen.com",
+                    url=host+"/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiIyNDdjNTFjMGM5MDc0NDI3YjNmMWZlNTBm%0D%0AZTJlYTg5YSIsInByZXZpZXdJbWciOiJodHRwczovL2ZpbGVzMi5oZXlnZW4uYWkvYXZhdGFyL3Yz%0D%0ALzI0N2M1MWMwYzkwNzQ0MjdiM2YxZmU1MGZlMmVhODlhL2Z1bGwvMi4yL3ByZXZpZXdfdGFyZ2V0%0D%0ALndlYnAiLCJuZWVkUmVtb3ZlQmFja2dyb3VuZCI6ZmFsc2UsImtub3dsZWRnZUJhc2VJZCI6Ijcy%0D%0AZjVkOGVlZjZlODRhODA4MzAyOWJhNDFmODczM2U0IiwidXNlcm5hbWUiOiI5Mzc0NGZkZTc1NGY0%0D%0AY2ZjOTQzNjA2NTU4Y2M3NjZlZSJ9&inIFrame=1",
+                    clientWidth=document.body.clientWidth,
+                    wrapDiv=document.createElement("div");
+                    wrapDiv.id="heygen-streaming-embed";
+                    const container=document.createElement("div");
+                    container.id="heygen-streaming-container";
+                    const stylesheet=document.createElement("style");
+                    stylesheet.innerHTML=`
+                        #heygen-streaming-embed {
+                            z-index: 1;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 0;
+                            border: none;
+                            box-shadow: none;
+                            transition: none;
+                            overflow: hidden;
+                        }
+                        #heygen-streaming-container {
+                            width: 100%;
+                            height: 100%;
+                        }
+                        #heygen-streaming-container iframe {
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                        }
+                    `;
+                    const iframe=document.createElement("iframe");
+                    iframe.allowFullscreen=!1;
+                    iframe.title="Streaming Embed";
+                    iframe.role="dialog";
+                    iframe.allow="microphone";
+                    iframe.src=url;
+                    let visible=!1,initial=!1;
+                    window.addEventListener("message",(e=>{
+                        e.origin===host&&e.data&&e.data.type&&"streaming-embed"===e.data.type&&(
+                            "init"===e.data.action?(initial=!0,wrapDiv.classList.toggle("show",initial)):
+                            "show"===e.data.action?(visible=!0,wrapDiv.classList.toggle("expand",visible)):
+                            "hide"===e.data.action&&(visible=!1,wrapDiv.classList.toggle("expand",visible))
+                        )
+                    }));
+                    container.appendChild(iframe);
+                    wrapDiv.appendChild(stylesheet);
+                    wrapDiv.appendChild(container);
+                    document.getElementById("avatar2").appendChild(wrapDiv);
+                }(globalThis);
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showAvatar(avatarId) {
+            document.querySelectorAll('.avatar-container').forEach(container => {
+                container.classList.remove('active');
+            });
+
+            document.getElementById(avatarId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
