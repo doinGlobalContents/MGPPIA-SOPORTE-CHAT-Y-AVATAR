@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,11 +34,13 @@
             max-height: 70px;
             visibility: visible;
             text-align: center;
+            align-content: center;
+    
         }
 
         .logoblanco {
             max-height: 70px;
-            visibility: hidden;
+            display: none;
             text-align: center;
         }
 
@@ -122,9 +124,22 @@
 
         @media (max-width: 900px) {
             header {
-                display: none;
-            }
+        flex-direction: column;
+        height: auto; /* Ajusta automáticamente la altura */
+        padding: 10px;
+        background: #000107;
+    }
 
+   .logonegro {
+    max-height: 10px;
+    display:none;
+    }
+    .logoblanco {
+    max-height: 50px;
+    display: inline-block;
+    text-align: center;
+    }
+            
             .button-container {
                 flex-direction: column;
                 margin: 30px
@@ -154,6 +169,7 @@
             .avatars-container {
                 width: 100%;
         }
+    }
     </style>
 </head>
 <body>
